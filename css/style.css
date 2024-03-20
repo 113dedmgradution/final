@@ -1,0 +1,920 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../font/MengNaChaoGangHei-1.otf') format('opentype'); /* 字體檔案的路徑和格式 */
+    /* 可選：你也可以提供其他格式的字體，以確保跨瀏覽器的兼容性 */
+}
+*{
+    font-family: 'MyCustomFont', 'Arial', '微軟正黑體';
+    scroll-behavior: smooth;
+}
+ul{
+    margin-bottom: 0 !important; 
+}
+/* #menu{
+    position: fixed;
+    height: 0%;
+    width: 100%;
+    z-index: 3;
+    display: none;
+    transition: height 0.3s ease;
+    overflow: hidden;
+} */
+#mynav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: height 0.3s ease;
+    z-index: 3;
+}
+
+/* 菜单内容样式 */
+#menu-content {
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+}
+
+/* 显示菜单时的高度 */
+#mynav.active {
+    height: 100%; /* 根据实际内容设置合适的高度 */
+}
+header{
+    background-color: rgba(194, 226, 254, 0.648);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: top 0.3s ease;
+    top: -100px;
+}
+.navIndex{
+    display: flex;
+    justify-content: space-between;
+}
+.navIndex div{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+.navIndex  li{
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    align-items: center;
+}
+.navIndex  li  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px 0px 5px;
+}
+.navIndex li:nth-child(n+2):nth-child(-n+4) a:hover{
+    transition-duration: 1s;
+    filter: drop-shadow(0px 0px 10px #ffffff87);
+    opacity: 0.7;
+}
+.nav-item.project > a{
+    text-align: center;
+    height: 66px;
+    line-height: 50px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+.nav-item.project > a:hover{
+    color: rgb(13, 50, 114);
+    cursor: pointer;
+}
+.icon{
+    background: url(../image/畢展主視覺標題文字.png);
+    width: 120px;
+    height: 80px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.iconR{
+    width: 65px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.iconR.yt{
+    background-image: url(../image/yt.png);
+}
+.iconR.fb{
+    background-image: url(../image/fb.png);
+}
+.iconR.ig{
+    background-image: url(../image/ig.png);
+}
+
+.all{
+    height: 1000px;
+    width: 100%;
+    background-image: url(../image/bg.png);
+    background-size: cover;
+}
+.bgAll{
+    background-image: url(../image/加封面素材的長條圖.png);
+    background-size: cover;
+}
+#s1 {
+    width: 100%;
+    height: 700px;
+    
+}
+
+.icon.big{
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    top: 0;
+    right: 160px;
+}
+.iconR.ig.content{
+    position: absolute;
+    right: 220px;
+    top: 68vh;
+    width: 110px;
+    height: 100px;
+}
+.iconR.fb.content{
+    position: absolute;
+    right: 220px;
+    top: 83vh;
+    width: 110px;
+    height: 100px;
+}
+.iconR.ig.content:hover, .iconR.fb.content:hover{
+    transition-duration: 0.2s;
+    filter: drop-shadow(0px 0px 10px #ffffffc3);
+}
+.videoBG{
+    width: 75%;
+    height: 75%;
+    top: 180px;
+    position: absolute;
+    margin-left: 40px;
+}
+/* .videoBG img{
+    width: 100%;
+    height: 100%;
+} */
+.videoBG > div:last-child{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.videoBG iframe{
+    /* position: absolute; */
+    /* top: 230px;
+    left: 26vw; */
+    position: absolute;
+    top: -67vh;
+    left: 2vw;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: scale(0.42);
+}
+.imagevideo{
+    background-image: url(../image/影片背景.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+@media screen and (max-width: 1155px){
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -62vh;
+    }
+    .top > a:nth-child(3), .top > a:nth-child(4){
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 1030px){
+    .icon.big{
+        width: 450px;
+        top: 50px;
+        right: 160px;
+        background-size: contain;
+        
+    }
+}
+@media screen and (max-width: 890px){
+    .icon.big{
+        width: 370px;
+        top: 70px;
+        right: 160px;
+    }
+}
+@media screen and (max-width: 872px){
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -64vh;
+    }
+}
+@media screen and (max-width: 890px){
+    .icon.big{
+        width: 370px;
+        top: 70px;
+        right: 140px;
+    }
+}
+@media screen and (max-width: 780px){
+    .icon.big{
+        width: 300px;
+        top: 100px;
+        right: 120px;
+    }
+    .navIndex{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 730px){
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -66vh;
+    }
+}
+@media screen and (max-width: 655px){
+    .icon.big{
+        top: 80px;
+        right: 80px;
+    }
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -67.5vh;
+    }
+    #s1{
+        height: 600px;
+    }
+}
+@media screen and (max-width: 560px){
+    .icon.big{
+        width: 320px;
+        top: 70px;
+        right: 0px;
+    }
+    .videoBG{
+        width: 90%;
+        height: 90%;
+        margin-left: 20px;
+    }
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 15vw;
+        top: -82vh;
+    }
+}
+@media screen and (max-width: 480px){
+    .icon.big{
+        width: 250px;
+        top: 80px;
+        right: 0px;
+    }
+    .videoBG{
+        width: 90%;
+        height: 90%;
+        margin-left: 20px;
+    }
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 15vw;
+        top: -83vh;
+    }
+    #s1{
+        height: 550px;
+    }
+}
+#s2{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+.left{
+    height: auto;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 300px;
+    /* border-right: ; */
+}
+.right{
+    height: 100%;
+    width: 75%;
+}
+.left > div{
+    position: sticky;
+    top: 300px;
+    text-align: center;
+}
+.left > div a{
+    font-size: 30px;
+    font-family: 'MyCustomFont', sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    color: white;
+}
+.left a:hover{
+    transition-duration: 0.2s;
+    filter: drop-shadow(0px 0px 10px #ffffffc3);
+}
+.left img{
+    width: 50px;
+    height: 50px;
+    animation-name: arrowDown;
+    animation-delay: 0.3s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+    visibility: hidden;
+}
+@keyframes arrowDown{
+    0%{
+        padding-top: 0px;
+        top: 0;
+    }
+    50%{
+        padding-top: 20px;
+        top: 15px;
+    }
+    100%{
+        padding-top: 0px;
+    }
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px;
+}
+
+.cards div:hover img{
+    opacity: 0.4;
+    transition-duration: 0.5s;
+}
+.cards div:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+.cards div:hover::after{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.cards > a > div{
+    margin: 40px;
+    border: solid 6px white;
+    border-radius: 10%;
+}
+.cards > a > div img{
+    width: 190px;
+    height: 190px;
+    border-radius: 10%;
+}
+.cards > a > div::after{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    letter-spacing: 3px;
+    top: 70px;
+    font-size: 22px;
+    visibility: hidden;
+}
+.cards > a > div::before{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    top: 105px;
+    opacity: 0;
+    font-size: 12px;
+    visibility: hidden;
+}
+.cards > a:nth-child(1) > div::after{
+    content: 'TCG藝術家';
+    left: 31px;
+    font-size: 22px;
+}
+.cards > a:nth-child(1) > div::before{
+    content: '#藝術家 #TCG卡牌';
+    left: 28px;
+    font-size: 12px;
+}
+.cards > a:nth-child(2) > div::after{
+    content: '你來See SEA';
+    left: 16px;
+    font-size: 20px;
+}
+.cards > a:nth-child(2) > div::before{
+    content: '#東南亞 #遊戲';
+    left: 40px;
+    font-size: 12px;
+    top: 102px;
+}
+.cards > a:nth-child(3) > div:after{
+    content: 'Rootkit';
+    left: 36px;
+    top: 67px;
+    font-size: 26px;
+}
+.cards > a:nth-child(3) > div:before{
+    content: '#解謎遊戲 #駭客';
+    left: 38px;
+    font-size: 12px;
+}
+.cards > a:nth-child(4) > div::after{
+    content: '水落石出';
+    left: 38px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > a:nth-child(4)> div::before{
+    content: '#實境解謎 #化石知識';
+    left: 22px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > a:nth-child(5) > div::after{
+    content: '甲蟲大小飼';
+    left: 25px;
+    top: 67px;
+    font-size: 26px;
+}
+.cards > a:nth-child(5) > div::before{
+    content: '#甲蟲電子書 #新手入門須知';
+    left: 7px;
+    top: 107px;
+    font-size: 11px;
+}
+.cards > a:nth-child(6) > div::after{
+    content: 'HTH';
+    left: 65px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > a:nth-child(6) > div::before{
+    content: '#橫幅2D遊戲 #家庭關係';
+    left: 14px;
+    top: 107px;
+    font-size: 11px;
+}
+.cards > a:nth-child(7) > div::after{
+    content: 'ChemIsTry';
+    left: 20px;
+    font-size: 22px;
+}
+.cards > a:nth-child(7) > div::before{
+    content: '#數位教材 #化學教材';
+    left: 20px;
+    font-size: 12px;
+}
+.cards > a:nth-child(8) > div::after{
+    content: '最後的島嶼';
+    left: 26px;
+    top: 67px;
+    font-size: 26px;
+}
+.cards > a:nth-child(8) > div::before{
+    content: '#桌遊 #全球暖化';
+    left: 37px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > a:nth-child(9) > div::after{
+    content: '海洋文明的嘆息';
+    left: 16px;
+    font-size: 20px;
+}
+.cards > a:nth-child(9) > div::before{
+    content: '#海洋汙染 #橫向RPG遊戲';
+    left: 12px;
+    font-size: 11px;
+}
+.cards > a:nth-child(10) > div::after{
+    content: '祈虎';
+    left: 65px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > a:nth-child(10) > div::before{
+    content: '#民間信仰 #本土文化';
+    left: 22px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > a:nth-child(11) > div::after{
+    content: '噓你貨幣';
+    left: 38px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > a:nth-child(11) > div::before{
+    content: '#虛擬貨幣 #動畫影片';
+    left: 22px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > a:nth-child(12) > div::after{
+    content: '漫步雲端';
+    left: 38px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > a:nth-child(12) > div::before{
+    content: '#360環景 #多媒體互動平台';
+    left: 5px;
+    top: 107px;
+    font-size: 11px;
+}
+.cards > a > div:hover::after{
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.cards > a > div:hover::before{
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro img{
+    width: 80%;
+}
+.exhibit{
+    padding: 100px;
+    padding-bottom: 150px;
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exhtext{
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    flex-direction: row;
+    width: 100%;
+}
+.exhtext > div:first-child{
+    margin-right: 20px;
+}
+.exhtext h1{
+    color: rgb(247, 216, 78);
+    font-size: 110px;
+}
+.exhtext h2{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.exhtext a{
+    text-decoration: none;
+}
+.innerPho img{
+    width: 100%;   
+}
+.detail > div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.detail img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.footer p{
+    margin: 0;
+    padding-bottom: 20px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.toTop-arrow {
+    width: 5rem;
+    height: 5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* border-radius: 33%; */
+    background: transparent;
+    opacity: 0.5;
+    background-image: url(../image/top.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position:fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
+}
+.toTop-arrow:hover{
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+.toTop-arrow:focus {outline: none;}
+
+@media screen and (max-width: 1143px){
+    .exhtext h1{
+        font-size: 90px;
+    }
+    .exhtext h2{
+        font-size: 16px;
+    }
+    .detail img{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media screen and (max-width: 1033px){
+    #s2{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+        padding-top: 100px;
+    }
+    .left img{
+        visibility: visible;
+    }
+    .left > div{
+        width: 100%;
+    }
+    .left > div a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(160, 183, 194, 0.486);
+        padding: 5px 0px;
+        box-shadow: 0 0 5px 10px rgba(160, 183, 194, 0.486);
+    }
+    .left a:hover{
+        background-color: rgba(165, 193, 206, 0.563);
+        box-shadow: 0 0 5px 10px rgbargba(165, 193, 206, 0.563);
+        color: rgba(255, 255, 255, 0.797);
+        text-decoration: none;
+    }
+    .right{
+        width: 100%;
+        padding-top: 30px;
+    }
+    .intro img {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 779px){
+    .cards{
+        /* justify-content: center; */
+        padding: 50px;
+    }
+    .left{
+        padding-top: 0;
+    }
+    .left > div a{
+        font-size: 26px;
+    }
+    .cards > a > div img{
+        width: 140px;
+        height: 140px;
+    }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::after{
+        width: 140px;
+        height: 140px;
+        top: 50px;
+        left: 10px;
+        font-size: 16px;
+        padding-right: 5px;
+        
+    }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::before{
+        width: 140px;
+        height: 140px;
+        letter-spacing: 3px;
+        top: 85px;
+        left: 10px;
+        font-size: 10px;
+        padding-right: 5px;
+    }
+    .exhibit{
+        padding: 60px;
+    }
+    .toTop-arrow{
+        width: 4rem;
+        height: 4rem;
+    }
+}
+@media screen and (max-width: 748px){
+    .exhtext h1{
+        font-size: 70px;
+    }
+    .exhtext h2{
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .detail img{
+        height: 15px;
+        width: 15px;
+    }
+    .detail > div{
+        margin-bottom: 3px;
+    }
+}
+@media screen and (max-width: 570px){
+    .icon{
+        width: 100px;
+        height: 60px;
+    }
+    .iconR{
+        width: 55px;
+        height: 50px;
+    }
+    .nav-item.project > a{
+        font-size: 19px;
+    }
+    .navIndex  li{
+        margin: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+    }
+    .left > div a{
+        font-size: 22px;
+    }
+    .cards > a > div img{
+        width: 110px;
+        height: 110px;
+    }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::after{
+        width: 110px;
+        height: 110px;
+        top: 40px;
+        left: 10px;
+        font-size: 14px;
+        padding-right: 5px;
+        
+    }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::before{
+        width: 110px;
+        height: 110px;
+        letter-spacing: 3px;
+        top: 65px;
+        left: 10px;
+        font-size: 8px;
+        padding-right: 5px;
+    }
+    .cards{
+        padding: 30px 20px;
+    }
+    .cards > a > div{
+        margin: 30px;
+    }
+    .toTop-arrow{
+        width: 3rem;
+        height: 3rem;
+    }
+}
+@media screen and (max-width: 569px){
+    .cards > a:nth-child(2) > div::after{
+        top: 20px;
+        left: 10px;
+        
+    }
+    .cards > a:nth-child(2) > div::before{
+        top: 65px;
+        left: 10px;
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 550px){
+    .exhtext h1{
+        font-size: 55px;
+    }
+    .exhtext h2{
+        font-size: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .detail img{
+        height: 12px;
+        width: 12px;
+    }
+    .detail{
+        margin-bottom: 4px;
+    }
+    .detail > div{
+        margin-bottom: 13px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 502px){
+    .cards{
+        padding: 30px 10px;
+    }
+}
+@media screen and (max-width: 470px){
+    .exhtext h1{
+        font-size: 42px;
+    }
+    .exhtext h2{
+        font-size: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .detail img{
+        height: 10px;
+        width: 10px;
+        margin-right: 5px;
+    }
+    .detail{
+        margin-bottom: 2px;
+    }
+    .detail > div{
+        margin-bottom: 10px;
+    }
+    .exhibit{
+        padding: 40px 40px 70px 40px;
+    }
+}
+@media screen and (max-width: 440px){
+    .icon{
+        width: 80px;
+        height: 50px;
+    }
+    .iconR{
+        width: 45px;
+        height: 40px;
+    }
+    .nav-item.project > a{
+        font-size: 14px;
+    }
+    .navIndex  li{
+        margin: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+    }
+    .left > div a{
+        font-size: 18px;
+    }
+    .intro img {
+        width: 100%;
+    }
+    .toTop-arrow{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+@media screen and (max-width: 382px){
+    .cards{
+        justify-content: center;
+    }
+    .exhtext h1{
+        font-size: 40px;
+    }
+}
